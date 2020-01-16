@@ -192,3 +192,4 @@
     - `else`
     - `elseif`
     - `return`
+    - `eof`
