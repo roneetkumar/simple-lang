@@ -2,24 +2,22 @@ package token
 
 type TokenType string
 
-type Token struct {
-	Type    TokenType
-	Literal string
-}
-
 const (
 	ILLEGAL = "ILLEGAL"
 	EOF     = "EOF"
 
-	IDENT = "IDENT"
-	INT   = "INT"
+	// Identifiers + literals
+	IDENT  = "IDENT"  // add, foobar, x, y, ...
+	INT    = "INT"    // 1343456
+	STRING = "STRING" // "foobar"
 
-	ASSIGN      = "="
-	PLUS        = "+"
-	MINUS       = "-"
-	ACCLAMATION = "!"
-	ASTERISK    = "*"
-	SLASH       = "/"
+	// Operators
+	ASSIGN   = "="
+	PLUS     = "+"
+	MINUS    = "-"
+	BANG     = "!"
+	ASTERISK = "*"
+	SLASH    = "/"
 
 	LT = "<"
 	GT = ">"
@@ -27,14 +25,19 @@ const (
 	EQ     = "=="
 	NOT_EQ = "!="
 
+	// Delimiters
 	COMMA     = ","
 	SEMICOLON = ";"
+	COLON     = ":"
 
-	LPAREN = "("
-	RPAREN = ")"
-	LBRACE = "{"
-	RBRACE = "}"
+	LPAREN   = "("
+	RPAREN   = ")"
+	LBRACE   = "{"
+	RBRACE   = "}"
+	LBRACKET = "["
+	RBRACKET = "]"
 
+	// Keywords
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
 	TRUE     = "TRUE"
@@ -44,8 +47,13 @@ const (
 	RETURN   = "RETURN"
 )
 
+type Token struct {
+	Type    TokenType
+	Literal string
+}
+
 var keywords = map[string]TokenType{
-	"task":   FUNCTION,
+	"fn":     FUNCTION,
 	"let":    LET,
 	"true":   TRUE,
 	"false":  FALSE,
@@ -54,7 +62,11 @@ var keywords = map[string]TokenType{
 	"return": RETURN,
 }
 
-//LookupIdent function
+primes := []int{2, 3, 5, 7, 11, 13}
+
+primes.
+
+
 func LookupIdent(ident string) TokenType {
 	if tok, ok := keywords[ident]; ok {
 		return tok
