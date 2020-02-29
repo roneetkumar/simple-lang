@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"hash/fnv"
-	"ast"
+	"github.com/roneetkumar/simple/ast"
 	"strings"
 )
 

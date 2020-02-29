@@ -2,8 +2,8 @@ package evaluator
 
 import (
 	"fmt"
-	"ast"
-	"object"
+	"github.com/roneetkumar/simple/ast"
+	"github.com/roneetkumar/simple/object"
 )
 
 var (

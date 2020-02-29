@@ -4,10 +4,10 @@ import (
 	"bufio"
 	"fmt"
 	"io"
-	"monkey/evaluator"
-	"monkey/lexer"
-	"monkey/object"
-	"monkey/parser"
+	"github.com/roneetkumar/simple/evaluator"
+	"github.com/roneetkumar/simple/lexer"
+	"github.com/roneetkumar/simple/object"
+	"github.com/roneetkumar/simple/parser"
 )
 
 const PROMPT = ">> "
@@ -56,7 +56,7 @@ const MONKEY_FACE = `            __,__
 
 func printParserErrors(out io.Writer, errors []string) {
 	io.WriteString(out, MONKEY_FACE)
-	io.WriteString(out, "Woops! We ran into some monkey business here!\n")
+	io.WriteString(out, "Woops! We ran into some github.com/roneetkumar/simple business here!\n")
 	io.WriteString(out, " parser errors:\n")
 	for _, msg := range errors {
 		io.WriteString(out, "\t"+msg+"\n")

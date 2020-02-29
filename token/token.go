@@ -62,11 +62,6 @@ var keywords = map[string]TokenType{
 	"return": RETURN,
 }
 
-primes := []int{2, 3, 5, 7, 11, 13}
-
-primes.
-
-
 func LookupIdent(ident string) TokenType {
 	if tok, ok := keywords[ident]; ok {
 		return tok
