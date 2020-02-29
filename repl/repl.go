@@ -4,14 +4,17 @@ import (
 	"bufio"
 	"fmt"
 	"io"
+
 	"github.com/roneetkumar/simple/evaluator"
 	"github.com/roneetkumar/simple/lexer"
 	"github.com/roneetkumar/simple/object"
 	"github.com/roneetkumar/simple/parser"
 )
 
+// PROMPT const
 const PROMPT = ">> "
 
+//Start function
 func Start(in io.Reader, out io.Writer) {
 	scanner := bufio.NewScanner(in)
 	env := object.NewEnvironment()
@@ -41,7 +44,8 @@ func Start(in io.Reader, out io.Writer) {
 	}
 }
 
-const MONKEY_FACE = `            __,__
+// MonkeyFace const
+const MonkeyFace = `            __,__
    .--.  .-"     "-.  .--.
   / .. \/  .-. .-.  \/ .. \
  | |  '|  /   Y   \  |'  | |
@@ -55,8 +59,8 @@ const MONKEY_FACE = `            __,__
 `
 
 func printParserErrors(out io.Writer, errors []string) {
-	io.WriteString(out, MONKEY_FACE)
-	io.WriteString(out, "Woops! We ran into some github.com/roneetkumar/simple business here!\n")
+	io.WriteString(out, MonkeyFace)
+	io.WriteString(out, "Woops! We ran into some simple business here!\n")
 	io.WriteString(out, " parser errors:\n")
 	for _, msg := range errors {
 		io.WriteString(out, "\t"+msg+"\n")
