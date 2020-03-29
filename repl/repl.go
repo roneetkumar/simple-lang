@@ -44,22 +44,13 @@ func Start(in io.Reader, out io.Writer) {
 	}
 }
 
-// MonkeyFace const
-const MonkeyFace = `            __,__
-   .--.  .-"     "-.  .--.
-  / .. \/  .-. .-.  \/ .. \
- | |  '|  /   Y   \  |'  | |
- | \   \  \ 0 | 0 /  /   / |
-  \ '- ,\.-"""""""-./, -' /
-   ''-' /_   ^ ^   _\ '-''
-       |  \._   _./  |
-       \   \ '~' /   /
-        '._ '-=-' _.'
-           '-----'
+// Simple const
+const SIMPLE_ERROR = `
+	INVALID CODE BLOCK
 `
 
 func printParserErrors(out io.Writer, errors []string) {
-	io.WriteString(out, MonkeyFace)
+	io.WriteString(out, SIMPLE_ERROR)
 	io.WriteString(out, "Woops! We ran into some simple business here!\n")
 	io.WriteString(out, " parser errors:\n")
 	for _, msg := range errors {

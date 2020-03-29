@@ -39,7 +39,7 @@ func main() {
 	//DEFINING ROUTES
 	mux.HandleFunc("/", indexHandler).Methods("GET")
 	mux.HandleFunc("/about", aboutHandler).Methods("GET")
-	mux.HandleFunc("/contact", contactHandler).Methods("GET")
+	mux.HandleFunc("/doc", docHandler).Methods("GET")
 
 	http.Handle("/", mux)
 
@@ -76,6 +76,6 @@ func aboutHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "<h1>About</h1>")
 }
 
-func contactHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "<h1>Contact</h1>")
+func docHandler(w http.ResponseWriter, r *http.Request) {
+	templates.ExecuteTemplate(w, "doc.html", nil)
 }
