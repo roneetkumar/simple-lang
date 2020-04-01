@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"os"
 	"os/user"
 
 	"html/template"
@@ -71,12 +70,20 @@ func Start(str string) string {
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	sourceCode := r.FormValue("code")
-	output := Start(sourceCode)
 
-	fmt.Println(output)
+	code := r.FormValue("code")
+	output := Start(code)
 
-	templates.ExecuteTemplate(w, "index.html", output)
+	data := struct {
+		Code, Output string
+	}{
+		Code:   code,
+		Output: output,
+	}
+
+	fmt.Println(data.Output)
+
+	templates.ExecuteTemplate(w, "index.html", data)
 }
 
 func aboutHandler(w http.ResponseWriter, r *http.Request) {
