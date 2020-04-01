@@ -1,0 +1,39 @@
+{
+	"ImportPath": "github.com/roneetkumar/Simple",
+	"GoVersion": "go1.13",
+	"GodepVersion": "v80",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.7.4",
+			"Rev": "75dcda0896e109a2a22c9315bca3bb21b87b2ba5"
+		},
+		{
+			"ImportPath": "github.com/roneetkumar/simple/ast",
+			"Rev": "9bf567734e45344779485df9bdc3a67ebedd5be4"
+		},
+		{
+			"ImportPath": "github.com/roneetkumar/simple/evaluator",
+			"Rev": "9bf567734e45344779485df9bdc3a67ebedd5be4"
+		},
+		{
+			"ImportPath": "github.com/roneetkumar/simple/lexer",
+			"Rev": "9bf567734e45344779485df9bdc3a67ebedd5be4"
+		},
+		{
+			"ImportPath": "github.com/roneetkumar/simple/object",
+			"Rev": "9bf567734e45344779485df9bdc3a67ebedd5be4"
+		},
+		{
+			"ImportPath": "github.com/roneetkumar/simple/parser",
+			"Rev": "9bf567734e45344779485df9bdc3a67ebedd5be4"
+		},
+		{
+			"ImportPath": "github.com/roneetkumar/simple/token",
+			"Rev": "9bf567734e45344779485df9bdc3a67ebedd5be4"
+		}
+	]
+}
