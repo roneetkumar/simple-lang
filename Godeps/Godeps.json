@@ -1,0 +1,10 @@
+{
+    "ImportPath": "github.com/roneetkumar/Simple",
+    "GoVersion": "go1.13.5",
+    "Deps": [
+        {
+            "ImportPath": "github.com/gorilla/mux",
+            "Rev": "28676070ab99"
+        }
+    ]
+}

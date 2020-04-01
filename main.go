@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 	"os/user"
 
 	"html/template"
@@ -44,7 +45,13 @@ func main() {
 	http.Handle("/", mux)
 
 	//DEFINING PORTS
-	http.ListenAndServe(":80", nil)
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		port = "8000"
+	}
+
+	http.ListenAndServe(":"+port, nil)
 
 }
 
