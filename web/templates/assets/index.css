@@ -72,7 +72,7 @@ textarea {
     width: 100vw;
     height: 500px;
     margin: auto;
-    overflow: hidden;
+    overflow: scroll;
     border: none;
     outline: none;
     resize: none;
